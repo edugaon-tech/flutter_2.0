@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "239775755533",
+    "firebase_url": "https://edugaon-tech-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "edugaon-tech",
+    "storage_bucket": "edugaon-tech.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239775755533:android:edabea3431909d79ea1444",
+        "android_client_info": {
+          "package_name": "com.edugaon.manager"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-T9JdeTD-wm9ZWDnavF9iOthOBiXbHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239775755533:android:a9d6414a5a61bcd7ea1444",
+        "android_client_info": {
+          "package_name": "com.example.flutter_learn_bipul"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCl-T9JdeTD-wm9ZWDnavF9iOthOBiXbHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
