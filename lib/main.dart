@@ -1,14 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_bipul/firebase/phone_auth_screen.dart';
 import 'package:flutter_learn_bipul/firebase_options.dart';
 import 'package:flutter_learn_bipul/second_screen.dart';
-import 'package:flutter_learn_bipul/stream/AddDataScreen.dart';
 import 'package:flutter_learn_bipul/users/user_provider.dart';
-import 'package:flutter_learn_bipul/users/user_screen.dart';
 import 'package:provider/provider.dart';
 
-import 'builder_view_screen.dart';
+import 'firebase/google_auth_screen.dart';
 
 void main() async{
 
@@ -40,7 +37,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: PhoneAuthScreen(),
+      home: GoogleAuthScreen(),
     );
   }
 }
