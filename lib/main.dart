@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learn_bipul/firebase_options.dart';
 import 'package:flutter_learn_bipul/second_screen.dart';
 import 'package:flutter_learn_bipul/users/user_provider.dart';
+import 'package:flutter_learn_bipul/views/auth/register_screen.dart';
 import 'package:provider/provider.dart';
-
-import 'firebase/google_auth_screen.dart';
+import 'firebase/firestore/crud_screen.dart';
 
 void main() async{
 
@@ -22,7 +22,6 @@ void main() async{
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -37,7 +36,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: GoogleAuthScreen(),
+      home: RegisterScreen(),
     );
   }
 }
