@@ -6,6 +6,7 @@ import 'package:flutter_learn_bipul/users/user_provider.dart';
 import 'package:flutter_learn_bipul/views/auth/register_screen.dart';
 import 'package:provider/provider.dart';
 import 'firebase/firestore/crud_screen.dart';
+import 'firebase/notification/notification_screen.dart';
 
 void main() async{
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: RegisterScreen(),
+      home: NotificationScreen(),
     );
   }
 }

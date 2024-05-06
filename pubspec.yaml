@@ -43,6 +43,7 @@ dependencies:
   google_sign_in: any
   cloud_firestore: ^4.16.1
   firebase_storage: any
+  flutter_local_notifications: any
 
 dev_dependencies:
   flutter_test:
