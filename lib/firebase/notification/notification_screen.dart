@@ -29,11 +29,16 @@ class _NotificationScreenState extends State<NotificationScreen> {
     // 1. initialize the plugin
      await notificationPlugin.initialize(const InitializationSettings(
       android: AndroidInitializationSettings("@mipmap/ic_launcher"),
+       iOS: DarwinInitializationSettings(
+         defaultPresentAlert: true,
+
+       )
     ));
 
     notificationPlugin.show(
         "".hashCode, "Vinay kumar", "Kya haal h pramod", const NotificationDetails(
-      android: AndroidNotificationDetails("channelId", "channelName")
+      android: AndroidNotificationDetails("channelId", "channelName",importance: Importance.high )
+
     ));
   }
 }

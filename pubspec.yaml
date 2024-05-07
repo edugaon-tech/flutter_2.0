@@ -44,6 +44,8 @@ dependencies:
   cloud_firestore: ^4.16.1
   firebase_storage: any
   flutter_local_notifications: any
+  firebase_messaging: any
+  graphview: ^1.2.0
 
 dev_dependencies:
   flutter_test:
