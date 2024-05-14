@@ -10,6 +10,7 @@ import 'package:flutter_learn_bipul/users/user_provider.dart';
 import 'package:provider/provider.dart';
 import 'firebase/notification/notification_screen.dart';
 
+@pragma('vm:entry-point')
 Future<void> onBackGroundMessageHandler(RemoteMessage message) async {
   NotificationService().showLocalNotification(message);
   print("title:${message.notification?.title}");
@@ -21,9 +22,12 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // to initialize firebase in the entire app
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  FirebaseMessaging.onBackgroundMessage(onBackGroundMessageHandler);
-  NotificationService().onForegroundNotification();
-  NotificationService().getFCMToken();
+
+  // FirebaseMessaging.onBackgroundMessage((message) => null);
+
+
+  // FirebaseMessaging.onBackgroundMessage(onBackGroundMessageHandler);
+  // NotificationService().getFCMToken();
 
   // FirebaseMessaging.onBackgroundMessage(onBackGroundNotification);
   //

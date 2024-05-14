@@ -17,7 +17,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
           onPressed: () {
             showLocalNotification();
           },
-          child: Text("Show Notification"),
+          child: const Text("Show Notification"),
         ),
       ),
     );
@@ -27,18 +27,31 @@ class _NotificationScreenState extends State<NotificationScreen> {
     var notificationPlugin = FlutterLocalNotificationsPlugin();
 
     // 1. initialize the plugin
-     await notificationPlugin.initialize(const InitializationSettings(
-      android: AndroidInitializationSettings("@mipmap/ic_launcher"),
-       iOS: DarwinInitializationSettings(
-         defaultPresentAlert: true,
-
-       )
-    ));
-
+    await notificationPlugin.initialize(
+        const InitializationSettings(
+            android: AndroidInitializationSettings("@mipmap/ic_launcher"),
+            iOS: DarwinInitializationSettings(
+              defaultPresentAlert: true,
+            )));
+    
     notificationPlugin.show(
-        "".hashCode, "Vinay kumar", "Kya haal h pramod", const NotificationDetails(
-      android: AndroidNotificationDetails("channelId", "channelName",importance: Importance.high )
-
-    ));
+        "".hashCode,
+        "Vinay kumar",
+        "Kya haal h pramod",
+        const NotificationDetails(
+            android: AndroidNotificationDetails("channelId", "channelName",
+                importance: Importance.high,
+                autoCancel: true,
+                chronometerCountDown: true,
+                progress: 40,
+                maxProgress: 100,
+                showProgress: true,
+                actions: [
+              AndroidNotificationAction("reply", "Reply",
+                  allowGeneratedReplies: true,
+                  inputs: [AndroidNotificationActionInput(label: "reply")]),
+              AndroidNotificationAction("id", "close",
+                  cancelNotification: true, showsUserInterface: true)
+            ])));
   }
 }
