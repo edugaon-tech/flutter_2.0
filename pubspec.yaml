@@ -43,9 +43,14 @@ dependencies:
   google_sign_in: any
   cloud_firestore: ^4.16.1
   firebase_storage: any
+  firebase_analytics: any
   flutter_local_notifications: any
   firebase_messaging: any
   graphview: ^1.2.0
+  firebase_dynamic_links: any
+  go_router: any
+  share_plus: any
+  fluttertoast: any
 
 dev_dependencies:
   flutter_test:
