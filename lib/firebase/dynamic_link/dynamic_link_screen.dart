@@ -54,3 +54,4 @@ class _DynamicLinkScreenState extends State<DynamicLinkScreen> {
     Share.share(link.shortUrl.toString());
   }
 }
+

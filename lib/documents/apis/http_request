@@ -1,0 +1,39 @@
+internet =
+network
+server
+storage
+database
+http/https
+domain = https://www.chatgpt.com/c/fbf6f75f-5c74-43b6-8b01-578987708c85
+
+https://chatgpt.com/
+
+http/https = setting the protocols of request and responsing
+
+(http request)
+
+http methods = how your are send request => GET, POST, PATCH, PUT, DELETE
+http request url/uri =  where to send request http://edugaon.com/login
+http headers = send extra data with api request () =>
+http body  = sending data (methods = )
+
+http response
+
+http://edugaon.com/logi
+
+response status code =
+200 : OK = success
+201 : Created = has sent
+
+400: Bad request => not proper request
+401: Unautorized => unknow request
+404: Not Found => not a proper request address
+
+500/501: Internet Server error =>
+
+response body =>  get data in a form of key and values (json)
+
+encode => hinding data and decode
+
+
+
