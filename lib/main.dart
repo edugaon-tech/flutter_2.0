@@ -8,7 +8,9 @@ import 'package:flutter_learn_bipul/firebase_options.dart';
 import 'package:flutter_learn_bipul/second_screen.dart';
 import 'package:flutter_learn_bipul/users/user_provider.dart';
 import 'package:provider/provider.dart';
+import 'firebase/dynamic_link/dynamic_link_screen.dart';
 import 'firebase/notification/notification_screen.dart';
+import 'learn/app_link/app_link_screen.dart';
 
 @pragma('vm:entry-point')
 Future<void> onBackGroundMessageHandler(RemoteMessage message) async {
@@ -22,7 +24,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   // to initialize firebase in the entire app
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
+  initDynamicLinks();
   // FirebaseMessaging.onBackgroundMessage((message) => null);
 
 
@@ -57,7 +59,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: ShowData(),
+      home: DynamicLinkScreen(),
     );
   }
 }

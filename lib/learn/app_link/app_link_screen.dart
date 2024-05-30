@@ -7,28 +7,29 @@ import '../../firebase/dynamic_link/dynamic_link_screen.dart';
 import '../../firebase_options.dart';
 
 void main() async {
-  runApp(YourApp());
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  runApp(YourApp());
   initDynamicLinks();
 }
-
-
 
 void initDynamicLinks() async {
   FirebaseDynamicLinks.instance.onLink.listen((event) {
     final Uri deepLink = event.link;
-    Fluttertoast.showToast(msg: event.link.queryParameters.toString());
-    print(deepLink);
-
+    var endPoint = deepLink.queryParameters;
+    var product = endPoint['product'];
+    var path = deepLink.query.split("=").first;
     if (deepLink != null) {
-
-      // Handle the deep link. For example, open the specific page.
-      // Navigator.pushNamed(context, deepLink.path);
+      Fluttertoast.showToast(msg: event.link.toString());
+      print(deepLink);
+      if (deepLink != null) {
+        // Handle the deep link. For example, open the specific page.
+        // Navigator.pushNamed(context, deepLink.path);
+      }
     }
   });
 
   final PendingDynamicLinkData? data =
-  await FirebaseDynamicLinks.instance.getInitialLink();
+      await FirebaseDynamicLinks.instance.getInitialLink();
   var deepLink = data?.link.path;
   Fluttertoast.showToast(msg: deepLink.toString());
   if (deepLink != null) {
@@ -49,9 +50,7 @@ class YourApp extends StatelessWidget {
   }
 
   var routers = GoRouter(routes: [
-    GoRoute(
-        path: "/",
-        builder: (_, __) => DynamicLinkScreen()),
+    GoRoute(path: "/", builder: (_, __) => DynamicLinkScreen()),
     GoRoute(
         path: "/profile",
         builder: (_, __) => Scaffold(
