@@ -8,6 +8,7 @@ import 'package:flutter_learn_bipul/firebase_options.dart';
 import 'package:flutter_learn_bipul/second_screen.dart';
 import 'package:flutter_learn_bipul/users/user_provider.dart';
 import 'package:provider/provider.dart';
+import 'apis/pexels/popular_videos_screen.dart';
 import 'apis/reqres_screen.dart';
 import 'firebase/dynamic_link/dynamic_link_screen.dart';
 import 'firebase/notification/notification_screen.dart';
@@ -60,7 +61,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: ReqresScreen(),
+      home: PopularVideosScreen(),
     );
   }
 }
