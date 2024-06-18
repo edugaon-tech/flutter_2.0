@@ -54,6 +54,7 @@ dependencies:
   crypto: any
   http: any
   video_player: ^2.8.7
+  paytm_allinonesdk: ^1.2.5
 
 dev_dependencies:
   flutter_test:
