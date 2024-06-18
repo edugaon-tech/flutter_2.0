@@ -3,11 +3,13 @@ import 'dart:async';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_bipul/apis/razorpay/customer/customer_api_services.dart';
 import 'package:flutter_learn_bipul/firebase/notification/notification_service.dart';
 import 'package:flutter_learn_bipul/firebase_options.dart';
 import 'package:flutter_learn_bipul/second_screen.dart';
 import 'package:flutter_learn_bipul/users/user_provider.dart';
 import 'package:provider/provider.dart';
+import 'apis/razorpay/customer/customers_screen.dart';
 import 'apis/reqres_screen.dart';
 import 'firebase/dynamic_link/dynamic_link_screen.dart';
 import 'firebase/notification/notification_screen.dart';
@@ -38,7 +40,7 @@ void main() async {
   // NotificationService().getFCMToken();
   // NotificationService().whenAppOpen();
   runApp(ChangeNotifierProvider(
-    create: (_) => UserProvider(),
+    create: (_) => CustomerApiServices(),
     child: const MyApp(),
   ));
 }
@@ -59,8 +61,8 @@ class MyApp extends StatelessWidget {
           ),
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: ReqresScreen(),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.blue))),
+      home: CustomersScreen(),
     );
   }
 }
