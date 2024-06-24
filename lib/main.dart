@@ -1,25 +1,16 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learn_bipul/firebase/phone_auth_screen.dart';
 import 'package:flutter_learn_bipul/firebase_options.dart';
-import 'package:flutter_learn_bipul/second_screen.dart';
-import 'package:flutter_learn_bipul/stream/AddDataScreen.dart';
-import 'package:flutter_learn_bipul/users/user_provider.dart';
-import 'package:flutter_learn_bipul/users/user_screen.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_learn_bipul/views/screens/register/register_screen.dart';
+import 'package:flutter_learn_bipul/views/utils/colors.dart';
+import 'package:flutter_learn_bipul/views/utils/styles/button_styles.dart';
 
-import 'builder_view_screen.dart';
-
-void main() async{
-
+void main() async {
   // binding you widgets with package's widgets
   WidgetsFlutterBinding.ensureInitialized();
   // to initialize firebase in the entire app
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(ChangeNotifierProvider(
-    create: (_) => UserProvider(),
-    child: const MyApp(),
-  ));
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -40,7 +31,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: PhoneAuthScreen(),
+      home: RegisterScreen(),
     );
   }
 }
@@ -74,61 +65,25 @@ class _MyHomePageState extends State<MyHomePage> {
     print("build");
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: appBarBgColor,
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           child: Icon(Icons.add),
         ),
         body: Column(
           children: [
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    icon = Icons.add;
-                  });
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SecondScreen()));
-                },
-                child: Text("Next ddd"),
-              ),
+            ElevatedButton(
+              onPressed: () {},
+              style: AppButtonStyles().appButton(),
+              child: Text("Default"),
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    icon = Icons.add;
-                  });
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SecondScreen()));
-                },
-                child: Text("Next ddd"),
-              ),
+            ElevatedButton(
+              onPressed: () {},
+              style: AppButtonStyles().appButton(bgColor: Colors.pink),
+              child: Text("Custom"),
             ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    icon = Icons.add;
-                  });
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SecondScreen()));
-                },
-                child: Text("Next ddd"),
-              ),
-            ),
-            Center(
-              child: ElevatedButton(
-                onPressed: () {
-                  setState(() {
-                    icon = Icons.add;
-                  });
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => SecondScreen()));
-                },
-                child: Text("Next ddd"),
-              ),
-            ),
-            Icon(icon)
           ],
         ),
       ),
