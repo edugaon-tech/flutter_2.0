@@ -53,6 +53,7 @@ dependencies:
   fluttertoast: any
   crypto: any
   http: any
+  google_maps_flutter: any
 
 dev_dependencies:
   flutter_test:

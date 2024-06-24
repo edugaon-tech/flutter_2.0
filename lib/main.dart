@@ -14,6 +14,7 @@ import 'apis/reqres_screen.dart';
 import 'firebase/dynamic_link/dynamic_link_screen.dart';
 import 'firebase/notification/notification_screen.dart';
 import 'learn/app_link/app_link_screen.dart';
+import 'maps/google_maps_screen.dart';
 
 @pragma('vm:entry-point')
 Future<void> onBackGroundMessageHandler(RemoteMessage message) async {
@@ -62,7 +63,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blue))),
-      home: CustomersScreen(),
+      home: MapSample(),
     );
   }
 }
