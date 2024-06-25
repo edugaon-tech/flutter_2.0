@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learn_bipul/views/utils/app_widgets/app_text_fields.dart';
 import 'package:flutter_learn_bipul/views/utils/styles/button_styles.dart';
 
 class RegisterWidgets {
@@ -10,13 +11,7 @@ class RegisterWidgets {
       TextEditingController controller, String hintText) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
-      child: TextFormField(
-        controller: controller,
-        decoration: InputDecoration(
-            hintText: hintText,
-            border:
-                OutlineInputBorder(borderRadius: BorderRadius.circular(20))),
-      ),
+      child: AppTextFields().authTextFields(controller),
     );
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_bipul/views/screens/register/register_widgets.dart';
+import 'package:flutter_learn_bipul/views/utils/colors.dart';
 import 'package:flutter_learn_bipul/views/utils/sizes.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -14,7 +15,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     var view = RegisterWidgets(context: context);
     return Scaffold(
-      appBar: AppBar(title: Text("Register"),),
+      appBar: AppBar(title: Text("Register"),backgroundColor: primaryColor,),
       body: Column(
        children: [
          view.registerTextFieldView(TextEditingController(), "Enter Name"),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const normalFontSize = 12.0;
+const textFieldsRadius = 10.0;
 
 class AppSizes {
   BuildContext context;
