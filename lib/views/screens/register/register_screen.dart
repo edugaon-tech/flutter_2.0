@@ -23,7 +23,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
          view.registerTextFieldView(TextEditingController(), "Enter Password"),
 
          SizedBox(height: AppSizes(context: context).getHeight/20,),
-         view.registerButtonView(onPressed: (){})
+         view.registerButtonView(onPressed: (){}),
+         Container(
+           decoration: BoxDecoration(
+
+           ),
+         )
        ],
       ),
     );

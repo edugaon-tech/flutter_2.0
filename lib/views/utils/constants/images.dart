@@ -1,0 +1,1 @@
+const profilePicUrl = "https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg";

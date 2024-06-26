@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_learn_bipul/firebase_options.dart';
+import 'package:flutter_learn_bipul/views/screens/profile/profile_screen.dart';
 import 'package:flutter_learn_bipul/views/screens/register/register_screen.dart';
 import 'package:flutter_learn_bipul/views/utils/colors.dart';
 import 'package:flutter_learn_bipul/views/utils/styles/button_styles.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: false,
           elevatedButtonTheme: ElevatedButtonThemeData(
               style: ElevatedButton.styleFrom(backgroundColor: Colors.red))),
-      home: RegisterScreen(),
+      home: ProfileScreen(),
     );
   }
 }
