@@ -9,7 +9,7 @@ class AppTextFields {
     decoration: InputDecoration(
       focusColor: primaryColor,
       filled: true,
-      fillColor: Colors.orangeAccent.withOpacity(.5),
+      fillColor: primaryColor.withOpacity(.5),
       enabledBorder: AppTextFiledDecorations.textFieldEnableBorder(),
       focusedBorder: AppTextFiledDecorations.textFieldFocusBorder(),
       disabledBorder: AppTextFiledDecorations.textFieldDisableBorder(),
