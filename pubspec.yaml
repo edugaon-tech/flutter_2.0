@@ -40,6 +40,7 @@ dependencies:
 #  firebase
   firebase_core: any
   firebase_auth: any
+  http: any
 
 dev_dependencies:
   flutter_test:
