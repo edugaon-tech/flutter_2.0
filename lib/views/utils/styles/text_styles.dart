@@ -7,7 +7,7 @@ class AppTextStyles {
    normalTextStyle() =>
       TextStyle(color: normalTextColor, fontSize: normalFontSize);
 
-   TextStyle ?boldTextStyle(
+   static TextStyle boldTextStyle(
           {Color textColor = boldTextColor, double fontSize = boldFontSize}) =>
       TextStyle(color: textColor, fontSize: fontSize);
 }
