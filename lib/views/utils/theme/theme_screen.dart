@@ -38,6 +38,13 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Container(
+                height: 200,
+                width: 300,
+                decoration: BoxDecoration(
+                  color:Theme.of(context).canvasColor,
+                ),
+              ),
               Text('Hello, World!'),
               ElevatedButton(
                 onPressed: () {},
